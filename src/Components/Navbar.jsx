@@ -6,11 +6,11 @@ const Navbar = () => {
         localStorage.setItem('theme', theme)
         const localTheme = localStorage.getItem('theme')
         document.querySelector('html').setAttribute('data-theme', localTheme)
-    },[theme])
+    }, [theme])
     const handleToggle = (e) => {
-        if(e.target.checked) {
+        if (e.target.checked) {
             setTheme('dark')
-        } else{
+        } else {
             setTheme('light')
         }
     }
@@ -59,7 +59,7 @@ const Navbar = () => {
                 </div>
                 <NavLink to='/login' className="btn">LogIn</NavLink>
                 <label className="cursor-pointer place-items-center hidden lg:inline-flex">
-                    <input onChange={handleToggle} type="checkbox"  className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2" />
+                    <input onChange={handleToggle} type="checkbox" className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2" />
                 </label>
             </div>
         </div>
