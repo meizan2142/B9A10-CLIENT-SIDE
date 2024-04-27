@@ -1,11 +1,22 @@
 import { NavLink } from "react-router-dom";
 
 const Register = () => {
+
+    const handleRegister = (e) => {
+        e.preventDefault()
+        const form = e.target;
+        const name = form.name.value;
+        const photo = form.photo.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(name, photo, email, password);
+    }
+
     return (
         <div className="hero">
             <div className="hero-content">
                 <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                    <form className="card-body">
+                    <form onSubmit={handleRegister} className="card-body">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Name</span>

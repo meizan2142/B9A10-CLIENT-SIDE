@@ -1,7 +1,9 @@
+import AddForm from "../Components/AddForm";
+
 const AddTouristSpot = () => {
     return (
         <div>
-            Add Tourist Spot
+            <AddForm></AddForm>
         </div>
     );
 };

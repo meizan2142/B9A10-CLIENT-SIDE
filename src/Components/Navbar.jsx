@@ -1,5 +1,20 @@
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 const Navbar = () => {
+    const [theme, setTheme] = useState('light')
+    useEffect(() => {
+        localStorage.setItem('theme', theme)
+        const localTheme = localStorage.getItem('theme')
+        document.querySelector('html').setAttribute('data-theme', localTheme)
+    },[theme])
+    const handleToggle = (e) => {
+        if(e.target.checked) {
+            setTheme('dark')
+        } else{
+            setTheme('light')
+        }
+    }
+    console.log(theme);
     const navLinks = <>
         <li><NavLink className='mr-4' to='/'>Home</NavLink></li>
         <li><NavLink className='mr-4' to='/allTouristSpot'>AllTouristSpot</NavLink></li>
@@ -17,14 +32,14 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <NavLink to='/' className="btn btn-ghost text-xl font-bold lg:text-3xl">BALENA</NavLink>
+                <NavLink to='/' className="btn btn-ghost text-xl font-bold lg:text-3xl">TourTracker</NavLink>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {navLinks}
                 </ul>
             </div>
-            <div className="navbar-end gap-3">
+            <div className="navbar-end gap-2">
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
@@ -43,6 +58,9 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <NavLink to='/login' className="btn">LogIn</NavLink>
+                <label className="cursor-pointer place-items-center hidden lg:inline-flex">
+                    <input onChange={handleToggle} type="checkbox"  className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2" />
+                </label>
             </div>
         </div>
     );
