@@ -1,12 +1,12 @@
 import { NavLink } from "react-router-dom";
-
+import { FaGoogle, FaGithub } from "react-icons/fa";
 const Login = () => {
     const handleSignIn = (e) => {
         e.preventDefault()
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log( email, password);
+        console.log(email, password);
     }
 
     return (
@@ -29,10 +29,18 @@ const Login = () => {
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
                         </div>
-                        <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
-                        </div>
                         <p>New to here? Please, <NavLink className='font-bold text-blue-400' to='/register'>Register</NavLink></p>
+                        <div className="form-control mt-2 space-y-3">
+                            <button className="btn btn-primary">Login</button>
+                        <button className="inline-flex items-center justify-center rounded-md text-sm font-medium  h-10 px-4 py-2 w-full mb-2 bg-blue-600 text-white gap-2">
+                            <FaGoogle />
+                            SIGN IN WITH FACEBOOK
+                        </button>
+                        <button className="inline-flex items-center justify-center rounded-md text-sm font-medium  h-10 px-4 py-2 w-full bg-blue-500 text-white gap-2">
+                            <FaGithub />
+                            SIGN IN WITH TWITTER
+                        </button>
+                        </div>
                     </form>
                 </div>
             </div>
