@@ -1,4 +1,4 @@
-const Update = () => {
+const UpdatePage = () => {
     return (
         <section className="p-6 shadow-lg rounded-lg lg:mt-10 mt-5">
             <form className="container flex flex-col mx-auto space-y-12">
@@ -42,7 +42,7 @@ const Update = () => {
                         </div>
                     </div>
                     <div className="col-span-full">
-                        <button className="btn btn-block">Update</button>
+                        <button className="btn btn-block btn-warning">Update</button>
                     </div>
                 </fieldset>
             </form>
@@ -50,4 +50,4 @@ const Update = () => {
     );
 };
 
-export default Update;
+export default UpdatePage;

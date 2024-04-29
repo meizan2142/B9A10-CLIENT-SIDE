@@ -11,7 +11,7 @@ const ExtraSectionTwo = () => {
                     <p className="mb-5 font-bold">Sign up now to recieve hot special offers and information about the best tour packages, updates and discounts !!</p>
                     <label className="input input-bordered flex items-center gap-2">
                         <input type="text" className="grow" placeholder="Your Email Address" />
-                        <NavLink to='/register' className="badge badge-info p-4 font-bold text-white">SignUp</NavLink>
+                        <NavLink to='/register' className="badge badge-info lg:p-4 font-bold text-white">SignUp</NavLink>
                     </label>
                     <p className="font-bold">Explore the world for less with our exclusive discount offers on flights, hotels, and packages!</p>
                 </div>

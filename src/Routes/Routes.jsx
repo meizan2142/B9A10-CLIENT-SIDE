@@ -7,6 +7,7 @@ import AddTouristSpot from "../Pages/AddTouristSpot";
 import MyList from "../Pages/MyList";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import UpdatePage from "../Pages/UpdatePage";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/update',
+                element: <UpdatePage></UpdatePage>
             },
         ]
     },
