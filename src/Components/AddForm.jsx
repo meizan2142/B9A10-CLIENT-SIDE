@@ -26,7 +26,6 @@ const AddForm = () => {
         .then(data => {
             console.log(data);
         })
-        // touristspotinfo
     }   
     return (
         <section className="p-6 shadow-lg rounded-lg lg:mt-10 mt-5">
