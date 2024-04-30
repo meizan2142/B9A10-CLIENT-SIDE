@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const MyList = () => {
     return (
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto lg:mt-10 mt-5">
             <table className="table table-zebra">
                 {/* head */}
                 <thead>
