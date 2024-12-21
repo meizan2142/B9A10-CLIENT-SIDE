@@ -1,20 +1,20 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 const Navbar = () => {
-    const [theme, setTheme] = useState('light')
-    useEffect(() => {
-        localStorage.setItem('theme', theme)
-        const localTheme = localStorage.getItem('theme')
-        document.querySelector('html').setAttribute('data-theme', localTheme)
-    }, [theme])
-    const handleToggle = (e) => {
-        if (e.target.checked) {
-            setTheme('dark')
-        } else {
-            setTheme('light')
-        }
-    }
-    console.log(theme);
+    // const [theme, setTheme] = useState('light')
+    // useEffect(() => {
+    //     localStorage.setItem('theme', theme)
+    //     const localTheme = localStorage.getItem('theme')
+    //     document.querySelector('html').setAttribute('data-theme', localTheme)
+    // }, [theme])
+    // const handleToggle = (e) => {
+    //     if (e.target.checked) {
+    //         setTheme('dark')
+    //     } else {
+    //         setTheme('light')
+    //     }
+    // }
+    // console.log(theme);
     const navLinks = <>
         <li><NavLink className='mr-4' to='/'>Home</NavLink></li>
         <li><NavLink className='mr-4' to='/allTouristSpot'>AllTouristSpot</NavLink></li>
@@ -43,7 +43,7 @@ const Navbar = () => {
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
-                            <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                            <img alt="Tailwind CSS Navbar component" src="https://i.ibb.co/FmVcWnf/saif-photo-jpg.jpg" />
                         </div>
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-10  p-2 shadow bg-base-100 rounded-box w-52">
@@ -58,9 +58,9 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <NavLink to='/login' className="btn">LogIn</NavLink>
-                <label className="cursor-pointer place-items-center hidden lg:inline-flex">
+                {/* <label className="cursor-pointer place-items-center hidden lg:inline-flex">
                     <input onChange={handleToggle} type="checkbox" className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2" />
-                </label>
+                </label> */}
             </div>
         </div>
     );

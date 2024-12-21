@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { FaGoogle, FaGithub } from "react-icons/fa";
 const Login = () => {
-
     return (
         <div className="hero">
             <div className="hero-content">

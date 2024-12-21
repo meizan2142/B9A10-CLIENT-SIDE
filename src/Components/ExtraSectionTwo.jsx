@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const ExtraSectionTwo = () => {
     return (
-        <div className="hero" style={{ backgroundImage: 'url(https://i.ibb.co/FgQw0Xs/panoramic-maldives-island-beach-tropical-landscape-summer-panorama-white-sand-with-palm-trees-sea-lu.jpg)' }}>
+        <div className="hero" style={{ backgroundImage: 'url(https://i.ibb.co/sRwkTJj/257c6d2dd.jpg)' }}>
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md space-y-10">

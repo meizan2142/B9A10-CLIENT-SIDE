@@ -10,11 +10,10 @@ Currently, two official plugins are available:
 Website Name: TourTracker
 Website URL: https://b9a10-backend-info.web.app/
 Features: 
-
-.
-.
-.
-.
-.
+1.
+2.
+3.
+4.
+5.
 
 Selected Category Name:  Southeast Asia

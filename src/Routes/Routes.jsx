@@ -8,6 +8,8 @@ import MyList from "../Pages/MyList";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import UpdatePage from "../Pages/UpdatePage";
+import TouristSpotDetails from "../Pages/TouristSpotDetails";
+import AllTouristSpotDetails from "../Pages/AllTouristSpotDetails";
 
 const router = createBrowserRouter([
     {
@@ -17,11 +19,13 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: () => fetch('https://b9-a10-server-lovat.vercel.app/touristspotinfo')
             },
             {
                 path: '/allTouristSpot',
-                element: <AllTouristSpot></AllTouristSpot>
+                element: <AllTouristSpot></AllTouristSpot>,
+                loader: () => fetch('https://b9-a10-server-lovat.vercel.app/touristspotinfo')
             },
             {
                 path: '/addTouristSpot',
@@ -29,7 +33,8 @@ const router = createBrowserRouter([
             },
             {
                 path: '/myList',
-                element: <MyList></MyList>
+                element: <MyList></MyList>,
+                loader: () => fetch('https://b9-a10-server-lovat.vercel.app/touristspotinfo')
             },
             {
                 path: '/login',
@@ -42,6 +47,16 @@ const router = createBrowserRouter([
             {
                 path: '/update',
                 element: <UpdatePage></UpdatePage>
+            },
+            {
+                path: '/touristSpotDetails/:id',
+                element: <TouristSpotDetails></TouristSpotDetails>,
+                loader: ({params}) => fetch(`https://b9-a10-server-lovat.vercel.app/touristspotinfo/${params.id}`)
+            },
+            {
+                path: '/allTouristSpotDetails/:id',
+                element: <AllTouristSpotDetails></AllTouristSpotDetails>,
+                loader: ({params}) => fetch(`https://b9-a10-server-lovat.vercel.app/touristspotinfo/${params.id}`)
             },
         ]
     },
