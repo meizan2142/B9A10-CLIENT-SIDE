@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-// import { NavLink } from "react-router-dom";
 const TouristSpotSection = ({ spot }) => {
     const { country, tourist, location, seasonality, cost, _id} = spot
     return (

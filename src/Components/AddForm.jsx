@@ -16,7 +16,7 @@ const AddForm = () => {
         const visitor = form.visitor.value;
         const newSpot = { name, email, photo, country, tourist, location, description, cost, seasonality, time, visitor }
         console.log(newSpot);
-        fetch('https://b9-a10-server-lovat.vercel.app/touristspotinfo', {
+        fetch('https://b9-a10-server-ja1ulfiso-saif-sultan-meizans-projects.vercel.app/touristspotinfo', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
